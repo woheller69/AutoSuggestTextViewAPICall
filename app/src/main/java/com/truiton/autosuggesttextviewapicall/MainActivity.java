@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -119,8 +120,13 @@ public class MainActivity extends AppCompatActivity {
                         if (jsonProperties.has("state")) state=jsonProperties.getString("state");
                         String postcode="";
                         if (jsonProperties.has("postcode")) postcode=jsonProperties.getString("postcode");
+                        String city=name;
+                        if (jsonProperties.has("city")) city=jsonProperties.getString("city");
 
-                        stringList.add(name+", "+countrycode+", "+state+", "+postcode+", "+jsonCoordinates.get(0).toString()+", "+jsonCoordinates.get(1).toString());
+                        String pattern="###.00";
+                        DecimalFormat df=new DecimalFormat(pattern);
+
+                        stringList.add(name+", "+postcode+" "+city+", "+state+", "+countrycode+", ("+df.format(jsonCoordinates.get(1))+"/"+df.format(jsonCoordinates.get(0))+")");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
