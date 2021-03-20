@@ -40,10 +40,9 @@ public class ApiCall {
         getRequestQueue().add(req);
     }
 
-    public static void make(Context ctx, String query, Response.Listener<String>
+    public static void make(Context ctx, String query, String url, String lang, Response.Listener<String>
             listener, Response.ErrorListener errorListener) {
-        String url = "https://itunes.apple.com/search?term=" + query
-                + "&country=US";
+        url = url + query+"&lang="+lang;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 listener, errorListener);
         ApiCall.getInstance(ctx).addToRequestQueue(stringRequest);

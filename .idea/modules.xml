@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AutoSuggestTextViewAPICall.iml" filepath="$PROJECT_DIR$/AutoSuggestTextViewAPICall.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AutoSuggestTextViewAPICall.iml" filepath="$PROJECT_DIR$/.idea/modules/AutoSuggestTextViewAPICall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AutoSuggestTextViewAPICall.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AutoSuggestTextViewAPICall.app.iml" />
     </modules>
   </component>
 </project>
